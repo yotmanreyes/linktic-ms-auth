@@ -21,7 +21,7 @@ import { Users } from './users.entity';
     {
       provide: 'CONFIG_OPTIONS',
       useFactory: async (configService: ConfigService) => ({
-        secret: configService.get<string>('SECRET'),
+        secret: configService.get<string>('JWT_SECRET'),
       }),
       inject: [ConfigService],
     },
